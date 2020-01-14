@@ -1,0 +1,12 @@
+add-field com.diamond.iain.javagame.Game[private static javax.script.ScriptEngineManager scriptEngineManager = new javax.script.ScriptEngineManager();]
+add-field com.diamond.iain.javagame.Game[private static javax.script.ScriptEngine scriptEngine = scriptEngineManager.getEngineByName("python");]
+add-field com.diamond.iain.javagame.Game[public static java.net.ServerSocket serverSocket = new java.net.ServerSocket(4000);]
+add-field com.diamond.iain.javagame.Game[public static java.net.Socket socket;]
+add-field com.diamond.iain.javagame.entities.Player[private static int newx = 0;]
+add-field com.diamond.iain.javagame.entities.Player[private static int newy = 0;]
+add-field com.diamond.iain.javagame.entities.Player[private static boolean isChanged = false;]
+add-method com.diamond.iain.javagame.entities.Player[public static void setPosition(int xpos, int ypos){}]
+set-method-body com.diamond.iain.javagame.entities.Player setPosition setposition.txt
+add-after-method com.diamond.iain.javagame.entities.Player tick tick.txt
+set-method-body com.diamond.iain.javagame.entities.Aliens addPlayerMissile addmissile.txt
+add-after-method com.diamond.iain.javagame.Game main main.txt

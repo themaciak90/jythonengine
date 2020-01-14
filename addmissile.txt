@@ -1,0 +1,2 @@
+java.awt.Point position = player.getPosition();
+playerMissiles.add(new com.diamond.iain.javagame.entities.PlayerMissile(manager, new java.awt.Point($1.x, position.y)));

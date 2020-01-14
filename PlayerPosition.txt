@@ -1,0 +1,3 @@
+from com.diamond.iain.javagame.entities import Player
+Player.setPosition(300,300)
+make

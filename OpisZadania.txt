@@ -1,0 +1,14 @@
+Program Invaders.jar zosta³ zmodyfikowany poprzez dodanie do niego biblioteki Jython.
+Program proszê uruchamiaæ komend¹:
+java -jar Refleksja-1.0-SNAPSHOT.jar --i Invaders.jar --script skrypt.txt --o out.jar
+Nastêpnie uruchomiæ plik out.jar oraz rozpocz¹æ grê.
+Uruchomiæ telnet w oddzielnej konsoli komend¹:
+telnet localhost 4000
+Skrypty do zadañ:
+1)MessageBox.txt
+2)PlayerPosition.txt
+3)OdczytPliku.txt
+
+Aby uruchomiæ skrypt nale¿y go skopiowaæ, a nastêpnie wkleiæ do okna telnetu
+za pomoc¹ prawego przycisku myszki.
+Odczytanie przez program linii make wykona skrypt.

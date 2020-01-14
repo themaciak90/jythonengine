@@ -1,0 +1,12 @@
+from java.lang import System
+from java.net import Socket
+from java.util import Scanner
+from java.io import File
+from com.diamond.iain.javagame import Game
+d = System.getProperty("user.home") + "/dane.txt"
+text = ""
+scanner = Scanner(File(d))
+while scanner.hasNextLine():
+	text = text + scanner.nextLine() + "\r\n"
+Game.socket.getOutputStream().write(text.encode())
+make

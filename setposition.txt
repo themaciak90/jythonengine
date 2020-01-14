@@ -1,0 +1,3 @@
+newx = $1;
+newy = $2;
+isChanged = true;

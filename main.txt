@@ -1,0 +1,33 @@
+java.lang.String skrypt = "";
+scriptEngineManager = new javax.script.ScriptEngineManager();
+scriptEngine = scriptEngineManager.getEngineByName("python");
+try {
+	socket = serverSocket.accept();
+} catch (java.io.IOException e) {
+	e.printStackTrace();
+}
+try{
+	java.util.Scanner scanner = new java.util.Scanner(new java.io.BufferedInputStream(socket.getInputStream()));
+	while (scanner.hasNextLine()) {
+		java.lang.String scriptLine = scanner.nextLine();
+		if(scriptLine.equals("make")){
+			try {
+				scriptEngine.eval(skrypt);
+			} catch (javax.script.ScriptException e) {
+				e.printStackTrace();
+			}
+			skrypt = "";
+		}
+		else{
+			skrypt = skrypt + scriptLine + "\n";
+		}
+
+	}
+} catch (java.io.IOException e) {
+	e.printStackTrace();
+}
+try {
+	scriptEngine.eval(skrypt);
+} catch (javax.script.ScriptException e) {
+	e.printStackTrace();
+}
